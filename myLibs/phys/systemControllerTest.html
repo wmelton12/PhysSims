@@ -24,7 +24,7 @@ svg = d3.select('body')
 world = new SystemController(svg)
 world.addMover(w/2,h/2,null,null)
 
-world.addForce(new Vector(0.01,-0.02))
+world.addForce(new Vector(0.001,-0.002))
 world.addObstacle()
 setInterval( () ->
 	world.update()

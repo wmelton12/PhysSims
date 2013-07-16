@@ -22,7 +22,7 @@ class Mover
 			@circ.attr("cx", @x)
 				.attr("cy", @y)
 			
-			if(@points.length > 0)	
+			if(@points.length > 300)	
 				@points[0].remove()
 				@points.shift()
 	setObstacle: (l) ->
@@ -60,7 +60,7 @@ class Mover
 			@vel.y*=-1
 		if(@obstacle != null)
 			if(@coll.circleAndHorizontalLine(@circ, @obstacle))	
-				console.log 'hello, there'
+				#console.log 'hello, there'
 				@vel.y*=-1
 				oy = parseInt(@obstacle.attr('y1'))
 				if(@aboveObs)
