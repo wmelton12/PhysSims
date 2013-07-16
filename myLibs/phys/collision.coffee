@@ -8,21 +8,22 @@ class Collider
    		y = l.attr('y1')
    		if y != l.attr('y2')
    			alert('invalid line')
-   		if(@x2 < @x1)
-   			console.log("changing")
-   			temp = @x1
-   			@x1 = @x2
-   			@x2 = temp
-   		cx = c.attr('cx')
-   		cy = c.attr('cy')
-   		r = c.attr('r')
-   		top = cy
+   		
+   		cx = parseInt(c.attr('cx'))
+   		cy = parseInt(c.attr('cy'))
+   		r = parseInt(c.attr('r'))
+   		top = cy - r
    		bottom = cy + r
+   		#alert("bottom: " + bottom + " cy: " + cy + " r: " + r)
    		leftMargin = cx - r
    		rightMargin = cx + r
+   		
    		#alert("x1:"+@x1+"x2:"+@x2)
    		if leftMargin < @x2 && rightMargin > @x1
-   			return top < y < bottom
+   			if top < y < bottom
+   				#alert "collision detected! This has been changed"
+   				#alert("top: " + top + " bottom: " + bottom + " r: " + r + " cy: " + cy)
+   				return true
    			
     distance: (ax,ay,bx,yb) ->
         return Math.sqrt(Math.pow(bx - ax, 2) + Math.pow(yb - ay, 2))

@@ -26,8 +26,11 @@ class SystemController
 	addObstacle: () ->
 		y = Math.floor(Math.random() * @svg.attr('height'))
 		x1 = Math.floor(Math.random() * @svg.attr('width'))
-		x2 = Math.floor(Math.random() * @svg.attr('width'))
-	
+		range = @svg.attr('width') - x1
+		x2 = Math.floor(Math.random() * range) + x1
+		y = 350
+		x1 = 0
+		x2 = 500
 		@obs = @svg.append('line')
 					.attr('x1',x1)
 					.attr('y1',y)
