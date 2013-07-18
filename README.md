@@ -56,7 +56,7 @@
    * moves in a plane
    * can bounce off 1 horizontal line 
    * bounces off edges
-    * uses vectors as forces
+   * uses vectors as forces
     * constructor
       * @svg: what to draw in
       * @x: initial x position
@@ -65,4 +65,17 @@
         * if null, doesn't draw bar graph
       * @g2:  grapher used to draw vector
         * if null, doesn't draw vector
-    * 
+    * applyForce
+     * adds a new vector to the force param, which is added to velocity at each update
+    * resetForce
+     * sets force to new Vector(0,0)
+    * display
+     * draws itself on the screen
+    * update
+     * updates vel, @x,@y, bar charts
+    * setObstacle
+     * sets the obstacle to respond to
+     * null to remove obstacle
+    * checkEdges
+     * check to see if hitting edges or obstacle
+     
