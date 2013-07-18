@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="myLibs/basic/d3.v3.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script src="http://joyrexus.spc.uchicago.edu/resources/coffee-script.js"></script>
+        <script src="myLibs/vector/vector.coffee" type="text/coffeescript"></script>
+        <script src="myLibs/phys/movers.coffee" type="text/coffeescript"></script>
+        <script src="myLibs/input/vectorInput/vectorInput.coffee" type="text/coffeescript"></script>
+        <script src="myLibs/input/text/input.coffee" type = "text/coffeescript"></script>
+        <script src="myLibs/graph/graph.coffee" type="text/coffeescript"></script>
+        <script src="myLibs/phys/collision.coffee" type="text/coffeescript"></script>
+        <script src="myLibs/phys/systemController.coffee" type="text/coffeescript"></script>
+	</head>
+	<body>
+<script type="text/coffeescript">
+world = d3.select('body')
+		  .append('svg')
+		  .attr('width', 500)
+		  .attr('height', 500)
+		  .style('position','absolute')
+		  .style('left', 0)
+		  .style('top', 0)
+		  .attr('x',0)
+		  .attr('y',0)
+
+drawSvg = d3.select('body')
+		  .append('svg')
+		  .attr('width', 2000)
+		  .attr('height', 200)
+		  .style('position','absolute')
+		  .style('left', 0)
+		  .style('top', 500)
+		  .attr('x',0)
+		  .attr('y',0)
+vectorSvg = d3.select('body')
+		  .append('svg')
+		  .attr('width', 200)
+		  .attr('height', 200)
+		  .style('position','absolute')
+		  .style('left', 500)
+		  .style('top', 0)
+		  .attr('x',500)
+		  .attr('y',0)
+vectorSvg = d3.select('body')
+		  .append('svg')
+		  .attr('width', 200)
+		  .attr('height', 200)
+		  .style('position','absolute')
+		  .style('left', 500)
+		  .style('top', 0)
+		  .attr('x',500)
+		  .attr('y',0)
+barSvg = d3.select('body')
+		  .append('svg')
+		  .attr('width', 200)
+		  .attr('height', 200)
+		  .style('position','absolute')
+		  .style('left', 500)
+		  .style('top', 200)
+		  .attr('x',500)
+		  .attr('y',200)
+sc = new SystemController(world)
+gr = new Grapher(vectorSvg)
+barGr = new Grapher(barSvg)
+graphers = []
+drawRect = drawSvg.append('rect')
+                 .attr('width',200)
+                 .attr('height',200)
+                 .attr('x',10)
+                 .attr('y',0)
+                 .attr('fill','red')
+				 .on("click", ()->
+    				pos = parseInt(drawRect.attr('x')) + 210
+   					drawRect.attr("x",pos)
+   					toCreate = d3.select('body').append('svg')
+   									  .attr('top','0px')
+   									  .style('position','absolute')
+   									  .style('left',''+ pos-210 + 'px')
+   									  .style('top','500px')
+   									  .attr('x', pos - 210)
+   									  .attr('y', 500)
+   									  .attr('width',200)
+   									  .attr('height',200)
+   									  .attr('id','' + pos-210)
+   					g = new VectorInputer(toCreate)
+   					g.setScaleX([-0.03,0.03])
+   					g.setScaleY([-0.03,0.03])
+   					graphers[graphers.length] = g
+				)
+sc.addMover(250,250,barGr,gr)
+
+setInterval( ()->
+	sc.resetForces()
+	i=0
+	while(i<graphers.length)
+		sc.addForce(graphers[i].getMostRecentPointAsVector())
+		i++
+	sc.update()
+)
+</script>
+	</body>
+</html>

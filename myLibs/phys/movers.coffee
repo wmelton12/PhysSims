@@ -41,7 +41,7 @@ class Mover
 		nv = @vel.mult(20)
 		nv = new Vector(nv.x, nv.y*-1)
 		if @g != null then @g.drawSingleBar(nv.mag())
-		if @g != null then @g2.drawVector(nv)
+		if @g2 != null then @g2.drawVector(nv)
 		@its++
 	
 	checkEdges: (w, h) ->

@@ -12,6 +12,8 @@ class SystemController
 	addForce: (v) ->
 		@forces[@forces.length] = v
 		return @forces.length-1
+	resetForces: ()->
+		@forces = []
 	addMover: (x,y,g1,g2) ->
 		@movers[@movers.length] = new Mover(@svg,x,y,g1,g2)
 		@movers[@movers.length - 1].display()
