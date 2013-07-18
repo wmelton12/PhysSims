@@ -65,17 +65,17 @@
         * if null, doesn't draw bar graph
       * @g2:  grapher used to draw vector
         * if null, doesn't draw vector
-    * applyForce
+   * applyForce
      * adds a new vector to the force param, which is added to velocity at each update
-    * resetForce
-     * sets force to new Vector(0,0)
-    * display
+   * resetForce
+    * sets force to new Vector(0,0)
+   * display
      * draws itself on the screen
-    * update
+   * update
      * updates vel, @x,@y, bar charts
-    * setObstacle
+   * setObstacle
      * sets the obstacle to respond to
      * null to remove obstacle
-    * checkEdges
+   * checkEdges
      * check to see if hitting edges or obstacle
      
