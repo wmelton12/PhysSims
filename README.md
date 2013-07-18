@@ -53,4 +53,16 @@
      * draws a bar in the graph, bottom left of bar at 0,0 in plane
 
 ### Mover 
-        
+    * moves in a plane
+    * can bounce off 1 horizontal line
+    * bounces off edges
+    * uses vectors as forces
+    * constructor
+      * @svg: what to draw in
+      * @x: initial x position
+      * @y: initial y position
+      * @g:  grapher used to draw magnitude of vector
+        * if null, doesn't draw bar graph
+      * @g2:  grapher used to draw vector
+        * if null, doesn't draw vector
+    * 
