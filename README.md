@@ -41,8 +41,8 @@
    * provides some basic collision
    * can detect the collision of a circle and a line
    * circleAndHorizontalLine
-   	 * returns true if the circle and horizontal line are colliding
-   	 
+       * returns true if the circle and horizontal line are colliding
+       
 ### Grapher
    * provides basix graphing capability
    * accepts an svg in constructor
@@ -53,9 +53,9 @@
      * draws a bar in the graph, bottom left of bar at 0,0 in plane
 
 ### Mover 
-    * moves in a plane
-    * can bounce off 1 horizontal line
-    * bounces off edges
+   * moves in a plane
+   * can bounce off 1 horizontal line 
+   * bounces off edges
     * uses vectors as forces
     * constructor
       * @svg: what to draw in
