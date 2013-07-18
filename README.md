@@ -51,7 +51,17 @@
      * draws a vector in a cartesian coordinate system
    * drawSingleBar (height)
      * draws a bar in the graph, bottom left of bar at 0,0 in plane
-
+     
+### VectorInputer
+   * allows the input of a vector from a cartesian plane 
+   * accepts an svg to draw in in constructor
+   * getMostRecentPointAsVector
+    * returns scaled version of vector drawn in plane by user
+   * setScaleX: ([lowerBound, upperBound])
+    * sets the scale used to scale the x value from the raw point data
+   * setScaleY:
+   	* sets y scale range
+    
 ### Mover 
    * moves in a plane
    * can bounce off 1 horizontal line 
