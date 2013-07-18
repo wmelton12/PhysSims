@@ -79,3 +79,21 @@
    * checkEdges
      * check to see if hitting edges or obstacle
      
+### SystemController
+   * manages a system of objects
+   * can have one obstacle
+   * updates all movers
+   * constructor
+    * @svg to draw in
+   * addForce (vector)
+    * add a force to the world
+    * returns position of that force in internal @forces array, used to change that force
+   * addMover (x, y, grapher for barChart, grapher for Vector)
+    * adds a new mover
+    * returns int which is position of mover within internal array of movers
+   * changeForce (i, v)
+    * i is position ( the one returned by addForce)
+    * vector to change it to
+   * addObstacle
+    * adds a random horizontal line to the field
+   
