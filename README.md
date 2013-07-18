@@ -7,8 +7,8 @@
 
 ## classes written
    ### Vector
-    * provides basic functions for vectors
-      * mult
+   	 * provides basic functions for vectors
+     * mult
         * by scalar
         * returns new Vector which is this multiplied by scalar
         * does not modify this scalar
