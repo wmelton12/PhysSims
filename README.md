@@ -36,5 +36,19 @@
    * limit
      * if the mag is over the limit, it returns a new Vector with limit as its magnitude, 
      * else it returns a clone of this vector
+### Collider
+   * provides some basic collision
+   * can detect the collision of a circle and a line
+   * circleAndHorizontalLine
+   	 * returns true if the circle and horizontal line are colliding
+### Grapher
+   * provides basix graphing capability
+   * accepts an svg in constructor
+     * draws in that svg
+   * drawVector
+     * draws a vector in a cartesian coordinate system
+   * drawSingleBar (height)
+     * draws a bar in the graph, bottom left of bar at 0,0 in plane
 
+### Mover 
         
