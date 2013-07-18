@@ -6,7 +6,7 @@
   * vector based
 
 ## classes written
-  * ### Vector
+   ### Vector
     * provides basic functions for vectors
       * mult
         * by scalar
