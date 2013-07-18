@@ -1,109 +1,14 @@
 # Physics Simulation
 
-## basics
-  * written in d3
-  * uses svg
-  * vector based
+I am learning about d3 and javascript/coffeescript and I wrote this to practice using these tools. 
 
-## classes written
-### Vector
-   * provides basic functions for vectors
-   * mult
-     * by scalar
-     * returns new Vector which is this multiplied by scalar
-     * does not modify this scalar
-   * divide
-     * works exactly like mult, but divides
-   * add
-     * adds a second vector to this vector
-     * returns new Vector
-     * does not modify either vector
-   * subtract
-     * works exactly like add, but subtracts
-   * mag
-     * returns the magnitude of the vector
-   * setMag
-     * returns a new vector with the magnitude of the  given value
-     * returns new Vector
-   * normalize
-     * returns new Vector
-     * mag of 1
-     * same angle
-   * clone
-     * returns new Vector which is exactly like this one
-   * heading
-     * should return the heading
-   * limit
-     * if the mag is over the limit, it returns a new Vector with limit as its magnitude, 
-     * else it returns a clone of this vector
-     
-### Collider
-   * provides some basic collision
-   * can detect the collision of a circle and a line
-   * circleAndHorizontalLine
-       * returns true if the circle and horizontal line are colliding
-       
-### Grapher
-   * provides basix graphing capability
-   * accepts an svg in constructor
-     * draws in that svg
-   * drawVector
-     * draws a vector in a cartesian coordinate system
-   * drawSingleBar (height)
-     * draws a bar in the graph, bottom left of bar at 0,0 in plane
-     
-### VectorInputer
-   * allows the input of a vector from a cartesian plane 
-   * accepts an svg to draw in in constructor
-   * getMostRecentPointAsVector
-    * returns scaled version of vector drawn in plane by user
-   * setScaleX: ([lowerBound, upperBound])
-    * sets the scale used to scale the x value from the raw point data
-   * setScaleY:
-   	* sets y scale range
-    
-### Mover 
-   * moves in a plane
-   * can bounce off 1 horizontal line 
-   * bounces off edges
-   * uses vectors as forces
-   * constructor
-      * @svg: what to draw in
-      * @x: initial x position
-      * @y: initial y position
-      * @g:  grapher used to draw magnitude of vector
-        * if null, doesn't draw bar graph
-      * @g2:  grapher used to draw vector
-        * if null, doesn't draw vector
-   * applyForce
-     * adds a new vector to the force param, which is added to velocity at each update
-   * resetForce
-    * sets force to new Vector(0,0)
-   * display
-     * draws itself on the screen
-   * update
-     * updates vel, @x,@y, bar charts
-   * setObstacle
-     * sets the obstacle to respond to
-     * null to remove obstacle
-   * checkEdges
-     * check to see if hitting edges or obstacle
-     
-### SystemController
-   * manages a system of objects
-   * can have one obstacle
-   * updates all movers
-   * constructor
-    * @svg to draw in
-   * addForce (vector)
-    * add a force to the world
-    * returns position of that force in internal @forces array, used to change that force
-   * addMover (x, y, grapher for barChart, grapher for Vector)
-    * adds a new mover
-    * returns int which is position of mover within internal array of movers
-   * changeForce (i, v)
-    * i is position ( the one returned by addForce)
-    * vector to change it to
-   * addObstacle
-    * adds a random horizontal line to the field
-   
+The simulation is a ball bouncing around in a 2d plane.  It displays the vector which describes its velocity and the magnitude of that vector in graphs to the right.
+
+Clicking the red box on the bottom will add a vectorInputter to the page.  Click a vectorInput will change the vector for that vectorInputer.  All of these vectors are added as forces.
+
+The project is written in Coffeescript
+
+Here's a link to the wiki, where you can see how the project is structured and the classes involved:
+   * [wiki](https://github.com/wmelton12/PhysSims/wiki/)
+
+Open phys.html to see the simulation
