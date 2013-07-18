@@ -57,7 +57,7 @@
    * can bounce off 1 horizontal line 
    * bounces off edges
    * uses vectors as forces
-    * constructor
+   * constructor
       * @svg: what to draw in
       * @x: initial x position
       * @y: initial y position
