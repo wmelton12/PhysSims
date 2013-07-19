@@ -1,91 +1,112 @@
-<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Physsims by wmelton12</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/wmelton12/PhysSims">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/wmelton12/PhysSims/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/wmelton12/PhysSims/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Physsims</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/wmelton12">wmelton12</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h1>
-<a name="physics-simulation" class="anchor" href="#physics-simulation"><span class="octicon octicon-link"></span></a>Physics Simulation</h1>
-
-<h2>
-<a name="vector-and-d3-based-bouncing-ball" class="anchor" href="#vector-and-d3-based-bouncing-ball"><span class="octicon octicon-link"></span></a>vector and d3 based bouncing ball</h2>
-
-<h3>
-<a name="sections" class="anchor" href="#sections"><span class="octicon octicon-link"></span></a>Sections</h3>
-
-<ul>
-<li>#### Vector
-
-<ul>
-<li>provides basic vector functions</li>
-</ul>
-</li>
-<li>
-<h4>
-<a name="collider" class="anchor" href="#collider"><span class="octicon octicon-link"></span></a>Collider</h4>
-
-<ul>
-<li>check for collisions</li>
-</ul>
-</li>
-<li>
-<h4>
-<a name="mover" class="anchor" href="#mover"><span class="octicon octicon-link"></span></a>mover</h4>
-
-<ul>
-<li>moves in responds to vector forces </li>
-<li>updates velocity </li>
-<li>checks basic collisions</li>
-<li>displays itself</li>
-</ul>
-</li>
-<li>
-<h4>
-<a name="systemcontroller" class="anchor" href="#systemcontroller"><span class="octicon octicon-link"></span></a>SystemController</h4>
-
-<ul>
-<li>controls system of movers</li>
-</ul>
-</li>
-</ul>
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    <a href="PhysSim.html">The Simulation</a>
-  </body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1187.34">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;head&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;script src="myLibs/basic/d3.v3.min.js" charset="utf-8"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;script src="http://joyrexus.spc.uchicago.edu/resources/coffee-script.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;script src="lib/vector/vector.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;script src="lib/phys/movers.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;script src="lib/input/vectorInput/vectorInput.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;script src="lib/input/text/input.js" type = "text/javascript"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;script src="lib/graph/graph.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;script src="lib/phys/collision.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;script src="lib/phys/systemController.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;/head&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;body&gt;</p>
+<p class="p1">&lt;script type="text/coffeescript"&gt;</p>
+<p class="p1">world = d3.select('body')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.append('svg')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('width', 1000)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('height', 500)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('position','absolute')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('left', 10)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('top', 10)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('x',10)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('y',10)</p>
+<p class="p2"><br></p>
+<p class="p1">drawSvg = d3.select('body')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.append('svg')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('width', 2000)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('height', 200)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('position','absolute')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('left', 0)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('top', 520)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('x',0)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('y',520)</p>
+<p class="p2"><br></p>
+<p class="p1">vectorSvg = d3.select('body')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.append('svg')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('width', 200)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('height', 200)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('position','absolute')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('left', 1020)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('top', 10)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('x',520)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('y',10)</p>
+<p class="p1">barSvg = d3.select('body')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.append('svg')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('width', 200)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('height', 200)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('position','absolute')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('left', 1020)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.style('top', 220)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('x',510)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">  </span>.attr('y',220)</p>
+<p class="p1">sc = new SystemController(world)</p>
+<p class="p1">gr = new Grapher(vectorSvg)</p>
+<p class="p1">barGr = new Grapher(barSvg)</p>
+<p class="p1">graphers = []</p>
+<p class="p1">drawRect = drawSvg.append('rect')</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>.attr('width',200)</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>.attr('height',200)</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>.attr('x',10)</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>.attr('y',0)</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>.attr('fill','red')</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> .on("click", ()-&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>pos = parseInt(drawRect.attr('x')) + 210</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>drawRect.attr("x",pos)</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>toCreate = d3.select('body').append('svg')</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span>.attr('top','0px')</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span>.style('position','absolute')</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span>.style('left',''+ pos-210 + 'px')</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span>.style('top','520px')</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span>.attr('x', pos - 210)</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span>.attr('y', 520)</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span>.attr('width',200)</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span>.attr('height',200)</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span>.attr('id','' + pos-210)</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>g = new VectorInputer(toCreate)</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>g.setScaleX([-0.03,0.03])</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>g.setScaleY([-0.03,0.03])</p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>graphers[graphers.length] = g</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>)</p>
+<p class="p1">sc.addMover(250,250,barGr,gr)</p>
+<p class="p2"><br></p>
+<p class="p1">setInterval( ()-&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>sc.resetForces()</p>
+<p class="p1"><span class="Apple-tab-span">	</span>i=0</p>
+<p class="p1"><span class="Apple-tab-span">	</span>while(i&lt;graphers.length)</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>sc.addForce(graphers[i].getMostRecentPointAsVector())</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>i++</p>
+<p class="p1"><span class="Apple-tab-span">	</span>sc.update()</p>
+<p class="p1">)</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
 </html>
