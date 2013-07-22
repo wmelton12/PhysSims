@@ -1,5 +1,7 @@
 # Physics Simulation
 
+## [The Running Simulation](http://wmelton12.github.io/PhysSims)
+
 I am learning about d3 and javascript/coffeescript and I wrote this to practice using these tools. 
 
 The simulation is a ball bouncing around in a 2d plane.  It displays the vector which describes its velocity and the magnitude of that vector in graphs to the right.
